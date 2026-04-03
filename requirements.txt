@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-dotenv
+python-multipart
+openai
+azure-ai-textanalytics
+azure-ai-vision-imageanalysis
+azure-search-documents
+azure-storage-blob
+pydantic-settings
+httpx
+pypdf2

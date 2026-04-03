@@ -1,0 +1,18 @@
+Use case : "FootPress AI" (Assistant intelligent pour journalistes sportifs)
+ 
+Le problème réel : Un journaliste couvre 3 matchs par week-end, doit rédiger vite, chercher des stats, retrouver des contextes historiques, comparer des performances. Il manque de temps, pas d'intelligence.
+ 
+Défi 1 - Backend intelligent
+* Un endpoint qui reçoit du texte (notes brutes du journaliste) ou une image (screenshot de tableau de stats) et adapte le traitement automatiquement
+* Résumé automatique, extraction d'entités (joueurs, clubs, scores), classification du type de contenu
+Défi 2 - RAG sur archives
+* Le journaliste uploade ses propres archives : anciens articles, rapports de matchs, fiches joueurs PDF
+* Il peut ensuite poser des questions comme "Comment Mbappé a-t-il performé dans les derbies ?" en s'appuyant sur ses propres données
+Défi 3 - Produit complet
+* Pipeline : upload article brut → extraction → enrichissement via RAG → génération d'un article structuré
+* Fonctionnalité clé : comparaison de deux matchs ou détection d'incohérences entre des stats et un article rédigé.
+Défi 4 - Regard critique
+* Ce qui est fragile : (ex :la qualité du RAG dépend des archives uploadées)
+* Ce qui coûte cher : (ex :Azure OpenAI à chaque génération)
+* Ce qui ne passerait pas en prod tel quel :  (ex :pas de gestion multi-utilisateurs, pas de droits sur les contenus générés)
+Pour l'API j'ai trouvé : https://www.football-data.org/
