@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#111827"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#16a34a"/>
+      <stop offset="100%" style="stop-color:#15803d"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1d4ed8"/>
+      <stop offset="100%" style="stop-color:#1e40af"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="azureGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0078d4"/>
+      <stop offset="100%" style="stop-color:#005a9e"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="glowGreen">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#16a34a" flood-opacity="0.5"/>
+    </filter>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Grid dots -->
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#1f2937"/>
+  </pattern>
+  <rect width="900" height="620" fill="url(#dots)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" fill="#f9fafb" font-size="18" font-weight="700">⚽ FootPress AI — Architecture</text>
+  <text x="450" y="56" text-anchor="middle" fill="#6b7280" font-size="11">FastAPI · Azure OpenAI · Azure AI Language · Azure AI Vision · Azure AI Search · Azure Blob Storage</text>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- LAYER 1 : CLIENT -->
+  <!-- ═══════════════════════════════ -->
+  <text x="24" y="94" fill="#6b7280" font-size="10" font-weight="600" letter-spacing="2">CLIENT</text>
+  <line x1="70" y1="90" x2="876" y2="90" stroke="#1f2937" stroke-width="1"/>
+
+  <!-- Nuxt 4 Frontend -->
+  <rect x="24" y="100" width="160" height="64" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="24" y="100" width="160" height="6" rx="5" fill="url(#greenGrad)"/>
+  <text x="104" y="126" text-anchor="middle" fill="#f9fafb" font-size="13" font-weight="700">🖥️ Nuxt 4</text>
+  <text x="104" y="143" text-anchor="middle" fill="#9ca3af" font-size="10">Frontend · Railway</text>
+  <text x="104" y="157" text-anchor="middle" fill="#6b7280" font-size="9">localhost:3000</text>
+
+  <!-- Swagger UI -->
+  <rect x="204" y="100" width="160" height="64" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="204" y="100" width="160" height="6" rx="5" fill="#1d4ed8"/>
+  <text x="284" y="126" text-anchor="middle" fill="#f9fafb" font-size="13" font-weight="700">📄 Swagger UI</text>
+  <text x="284" y="143" text-anchor="middle" fill="#9ca3af" font-size="10">Auto-doc FastAPI</text>
+  <text x="284" y="157" text-anchor="middle" fill="#6b7280" font-size="9">/docs</text>
+
+  <!-- Arrow client → API Gateway -->
+  <line x1="184" y1="132" x2="390" y2="220" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowGreen)"/>
+  <line x1="364" y1="132" x2="420" y2="220" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowBlue)"/>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- LAYER 2 : API GATEWAY -->
+  <!-- ═══════════════════════════════ -->
+  <text x="24" y="206" fill="#6b7280" font-size="10" font-weight="600" letter-spacing="2">API GATEWAY</text>
+  <line x1="110" y1="202" x2="876" y2="202" stroke="#1f2937" stroke-width="1"/>
+
+  <!-- FastAPI box -->
+  <rect x="330" y="214" width="240" height="74" rx="10" fill="#14532d" stroke="#16a34a" stroke-width="2" filter="url(#glowGreen)"/>
+  <text x="450" y="240" text-anchor="middle" fill="#f9fafb" font-size="14" font-weight="800">⚡ FastAPI</text>
+  <text x="450" y="258" text-anchor="middle" fill="#86efac" font-size="10">footpress-api.up.railway.app</text>
+  <rect x="346" y="265" width="62" height="16" rx="4" fill="#166534"/>
+  <text x="377" y="276" text-anchor="middle" fill="#86efac" font-size="9">CORS</text>
+  <rect x="414" y="265" width="72" height="16" rx="4" fill="#166534"/>
+  <text x="450" y="276" text-anchor="middle" fill="#86efac" font-size="9">Monitoring</text>
+  <rect x="492" y="265" width="72" height="16" rx="4" fill="#166534"/>
+  <text x="528" y="276" text-anchor="middle" fill="#86efac" font-size="9">API Key Auth</text>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- LAYER 3 : ROUTERS -->
+  <!-- ═══════════════════════════════ -->
+  <text x="24" y="322" fill="#6b7280" font-size="10" font-weight="600" letter-spacing="2">ROUTERS</text>
+  <line x1="84" y1="318" x2="876" y2="318" stroke="#1f2937" stroke-width="1"/>
+
+  <!-- Arrow FastAPI → Routers -->
+  <line x1="390" y1="288" x2="170" y2="336" stroke="#374151" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="450" y1="288" x2="450" y2="336" stroke="#374151" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="510" y1="288" x2="720" y2="336" stroke="#374151" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <!-- Router Défi 1 -->
+  <rect x="60" y="334" width="210" height="72" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="60" y="334" width="210" height="5" rx="4" fill="url(#blueGrad)"/>
+  <text x="165" y="357" text-anchor="middle" fill="#93c5fd" font-size="11" font-weight="700">🎯 Défi 1 — AI Playground</text>
+  <text x="165" y="372" text-anchor="middle" fill="#6b7280" font-size="9">POST /api/v1/analyze/</text>
+  <text x="165" y="387" text-anchor="middle" fill="#4b5563" font-size="9">Détection auto : text · image · query</text>
+  <text x="165" y="399" text-anchor="middle" fill="#4b5563" font-size="9">router_service → orchestration</text>
+
+  <!-- Router Défi 2 -->
+  <rect x="345" y="334" width="210" height="72" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+  <rect x="345" y="334" width="210" height="5" rx="4" fill="url(#purpleGrad)"/>
+  <text x="450" y="357" text-anchor="middle" fill="#d8b4fe" font-size="11" font-weight="700">📚 Défi 2 — RAG Archives</text>
+  <text x="450" y="372" text-anchor="middle" fill="#6b7280" font-size="9">POST /rag/upload · /rag/query</text>
+  <text x="450" y="387" text-anchor="middle" fill="#4b5563" font-size="9">PDF → chunks → embed → index</text>
+  <text x="450" y="399" text-anchor="middle" fill="#4b5563" font-size="9">Vector search · Top-K retrieval</text>
+
+  <!-- Router Défi 3 -->
+  <rect x="630" y="334" width="210" height="72" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="630" y="334" width="210" height="5" rx="4" fill="#f59e0b"/>
+  <text x="735" y="357" text-anchor="middle" fill="#fcd34d" font-size="11" font-weight="700">⚙️ Défi 3 — Pipeline</text>
+  <text x="735" y="372" text-anchor="middle" fill="#6b7280" font-size="9">/generate-article · /check-coherence</text>
+  <text x="735" y="387" text-anchor="middle" fill="#4b5563" font-size="9">Entités → RAG → GPT</text>
+  <text x="735" y="399" text-anchor="middle" fill="#4b5563" font-size="9">Fact-checking · Synthèse</text>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- LAYER 4 : AZURE SERVICES -->
+  <!-- ═══════════════════════════════ -->
+  <text x="24" y="442" fill="#6b7280" font-size="10" font-weight="600" letter-spacing="2">AZURE AI SERVICES</text>
+  <line x1="155" y1="438" x2="876" y2="438" stroke="#1f2937" stroke-width="1"/>
+
+  <!-- Arrows Routers → Services -->
+  <line x1="165" y1="406" x2="100" y2="454" stroke="#374151" stroke-width="1" marker-end="url(#arrowGray)"/>
+  <line x1="165" y1="406" x2="250" y2="454" stroke="#374151" stroke-width="1" marker-end="url(#arrowGray)"/>
+  <line x1="450" y1="406" x2="430" y2="454" stroke="#374151" stroke-width="1" marker-end="url(#arrowGray)"/>
+  <line x1="450" y1="406" x2="590" y2="454" stroke="#374151" stroke-width="1" marker-end="url(#arrowGray)"/>
+  <line x1="735" y1="406" x2="735" y2="454" stroke="#374151" stroke-width="1" marker-end="url(#arrowGray)"/>
+  <line x1="735" y1="406" x2="820" y2="454" stroke="#374151" stroke-width="1" marker-end="url(#arrowGray)"/>
+
+  <!-- Service : OpenAI -->
+  <rect x="24" y="452" width="140" height="76" rx="10" fill="#1e293b" stroke="#0078d4" stroke-width="1.5"/>
+  <rect x="24" y="452" width="140" height="5" rx="4" fill="url(#azureGrad)"/>
+  <text x="94" y="474" text-anchor="middle" fill="#7dd3fc" font-size="11" font-weight="700">Azure OpenAI</text>
+  <text x="94" y="489" text-anchor="middle" fill="#6b7280" font-size="9">GPT-4.1-mini</text>
+  <text x="94" y="502" text-anchor="middle" fill="#6b7280" font-size="9">text-embedding-3-small</text>
+  <text x="94" y="516" text-anchor="middle" fill="#4b5563" font-size="8">Génération · RAG · Eval</text>
+  <text x="94" y="524" text-anchor="middle" fill="#1d4ed8" font-size="8">swedencentral</text>
+
+  <!-- Service : Language -->
+  <rect x="178" y="452" width="140" height="76" rx="10" fill="#1e293b" stroke="#0078d4" stroke-width="1.5"/>
+  <rect x="178" y="452" width="140" height="5" rx="4" fill="url(#azureGrad)"/>
+  <text x="248" y="474" text-anchor="middle" fill="#7dd3fc" font-size="11" font-weight="700">AI Language</text>
+  <text x="248" y="489" text-anchor="middle" fill="#6b7280" font-size="9">Résumé extractif</text>
+  <text x="248" y="502" text-anchor="middle" fill="#6b7280" font-size="9">NER · Sentiment</text>
+  <text x="248" y="516" text-anchor="middle" fill="#4b5563" font-size="8">Opinion mining</text>
+  <text x="248" y="524" text-anchor="middle" fill="#1d4ed8" font-size="8">swedencentral · F0</text>
+
+  <!-- Service : Vision -->
+  <rect x="332" y="452" width="140" height="76" rx="10" fill="#1e293b" stroke="#0078d4" stroke-width="1.5"/>
+  <rect x="332" y="452" width="140" height="5" rx="4" fill="url(#azureGrad)"/>
+  <text x="402" y="474" text-anchor="middle" fill="#7dd3fc" font-size="11" font-weight="700">AI Vision</text>
+  <text x="402" y="489" text-anchor="middle" fill="#6b7280" font-size="9">OCR (READ)</text>
+  <text x="402" y="502" text-anchor="middle" fill="#6b7280" font-size="9">Tags · Classification</text>
+  <text x="402" y="516" text-anchor="middle" fill="#4b5563" font-size="8">Images de matchs</text>
+  <text x="402" y="524" text-anchor="middle" fill="#1d4ed8" font-size="8">swedencentral · F0</text>
+
+  <!-- Service : AI Search -->
+  <rect x="486" y="452" width="140" height="76" rx="10" fill="#1e293b" stroke="#0078d4" stroke-width="1.5"/>
+  <rect x="486" y="452" width="140" height="5" rx="4" fill="url(#azureGrad)"/>
+  <text x="556" y="474" text-anchor="middle" fill="#7dd3fc" font-size="11" font-weight="700">AI Search</text>
+  <text x="556" y="489" text-anchor="middle" fill="#6b7280" font-size="9">Index vectoriel HNSW</text>
+  <text x="556" y="502" text-anchor="middle" fill="#6b7280" font-size="9">1536-dim embeddings</text>
+  <text x="556" y="516" text-anchor="middle" fill="#4b5563" font-size="8">Top-K retrieval</text>
+  <text x="556" y="524" text-anchor="middle" fill="#1d4ed8" font-size="8">footpresssearch · Free</text>
+
+  <!-- Service : Blob Storage -->
+  <rect x="640" y="452" width="140" height="76" rx="10" fill="#1e293b" stroke="#0078d4" stroke-width="1.5"/>
+  <rect x="640" y="452" width="140" height="5" rx="4" fill="url(#azureGrad)"/>
+  <text x="710" y="474" text-anchor="middle" fill="#7dd3fc" font-size="11" font-weight="700">Blob Storage</text>
+  <text x="710" y="489" text-anchor="middle" fill="#6b7280" font-size="9">PDFs journalistes</text>
+  <text x="710" y="502" text-anchor="middle" fill="#6b7280" font-size="9">user_id/filename.pdf</text>
+  <text x="710" y="516" text-anchor="middle" fill="#4b5563" font-size="8">Isolation multi-user</text>
+  <text x="710" y="524" text-anchor="middle" fill="#1d4ed8" font-size="8">footpressstorage</text>
+
+  <!-- Service : Monitoring -->
+  <rect x="794" y="452" width="82" height="76" rx="10" fill="#1e293b" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="794" y="452" width="82" height="5" rx="4" fill="url(#greenGrad)"/>
+  <text x="835" y="471" text-anchor="middle" fill="#86efac" font-size="10" font-weight="700">Monitoring</text>
+  <text x="835" y="485" text-anchor="middle" fill="#6b7280" font-size="8">Métriques</text>
+  <text x="835" y="497" text-anchor="middle" fill="#6b7280" font-size="8">in-memory</text>
+  <text x="835" y="509" text-anchor="middle" fill="#4b5563" font-size="8">/metrics</text>
+  <text x="835" y="521" text-anchor="middle" fill="#16a34a" font-size="8">BONUS</text>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- LEGEND -->
+  <!-- ═══════════════════════════════ -->
+  <rect x="24" y="556" width="852" height="50" rx="8" fill="#0f172a" stroke="#1f2937" stroke-width="1"/>
+
+  <!-- Legend items -->
+  <line x1="44" y1="581" x2="74" y2="581" stroke="#16a34a" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowGreen)"/>
+  <text x="80" y="585" fill="#9ca3af" font-size="10">Requête client</text>
+
+  <line x1="178" y1="581" x2="208" y2="581" stroke="#4b5563" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <text x="214" y="585" fill="#9ca3af" font-size="10">Appel interne</text>
+
+  <rect x="320" y="573" width="10" height="10" rx="2" fill="#0078d4"/>
+  <text x="335" y="585" fill="#9ca3af" font-size="10">Service Azure</text>
+
+  <rect x="432" y="573" width="10" height="10" rx="2" fill="#16a34a"/>
+  <text x="447" y="585" fill="#9ca3af" font-size="10">Bonus implémenté</text>
+
+  <rect x="560" y="573" width="10" height="10" rx="2" fill="#1d4ed8"/>
+  <text x="575" y="585" fill="#9ca3af" font-size="10">Région : Sweden Central</text>
+
+  <text x="740" y="581" fill="#6b7280" font-size="9">Python 3.11 · FastAPI · Railway · 2026</text>
+</svg>
